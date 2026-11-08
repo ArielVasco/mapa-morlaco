@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sabores de Cuenca – Mapa gastronómico</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#mapa" aria-label="Inicio">
+      <!-- Aquí irá el logo: reemplazar el div por <img src="img/logo.png" alt="Logo"> -->
+      <div class="logo-placeholder">LOGO</div>
+      <span class="brand-name">Sabores de Cuenca</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Menú principal">
+      <button class="tab active" data-tab="mapa">🗺️ Mapa</button>
+      <button class="tab" data-tab="rutas">🧭 Rutas</button>
+      <button class="tab" data-tab="notificaciones">🔔 Notificaciones <span class="badge" id="badge">0</span></button>
+      <button class="tab" data-tab="buscar">🔎 Buscar</button>
+      <button class="tab" data-tab="recetas">🍲 Recetas</button>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+    <section class="map-wrap">
+      <div id="map" role="application" aria-label="Mapa de Cuenca"></div>
+      <button class="locate" id="locate" title="Mi ubicación">📍</button>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
